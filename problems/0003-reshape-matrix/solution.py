@@ -9,7 +9,7 @@ def reshape_matrix(a: list[list[int|float]], new_shape: tuple[int, int]) -> list
 		for i in range(len(row)):
 			flat_buffer.append(row[i])
 
-	if (new_shape[0] * new_shape[1]) < len(flat_buffer):
+	if (new_shape[0] * new_shape[1]) != len(flat_buffer):
 		return []
 
 	reshaped_matrix = []
